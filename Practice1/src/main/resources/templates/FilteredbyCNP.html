@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="patient:${patients}">
+    <span th:if="${filter == 'cnp'}">
+        <span th:if="${patients.getCNP() == filterValue}">
+            <p th:text="${patients.getCNP()}"></p>
+        </span>
+    </span>
+</div>
+</body>
+</html>
